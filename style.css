@@ -1,0 +1,214 @@
+/* tells the navigation bar to go across the page and not down the page, sets the width to 100% of the page, and makes the nav bar justified on the right of the page */
+#nav-bar {
+     /* Use flexbox layout to align items in a row */
+    display: flex;
+     /* Align the navigation items horizontally (in a row) rather than vertically (down the page)*/
+    flex-direction: row; 
+}
+
+#nav-barcontainer {
+    display: flex;
+    justify-content: flex-end;
+    /* Align the navigation items to the right of the page */
+}
+
+.nav-item a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.image-container {
+    display: flex;
+    /* Flexbox to place items side by side */
+    align-items: center;
+    /* Vertically center the items */
+    justify-content: flex-start; 
+    /* Align the content to the left */
+    padding-top: 40px;
+}
+
+.image {
+    width: 150px;
+    /* Set a fixed width for the image */
+    height: auto;
+    /* Keep the aspect ratio of the image */
+    margin-right: 40px;
+    /* Adds space between the image and the text */
+    margin-left: 40
+}
+
+.text h2 {
+    font-size: 2em;
+    /* Set the font size of the h2 */
+    margin: 0;
+    /* Remove default margin */
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+.text p {
+    font-size: 1.2em;
+    /* Set the font size of the paragraph */
+    margin: 0;
+    /* Remove default margin */
+    padding-left: 40px;
+    /* Add padding to the left */
+}
+
+.text h2, .text p {
+    white-space: nowrap;
+    /* Prevent text from wrapping to the next line */
+    overflow: hidden;
+    /* Hide text that exceeds container */
+    border-right: 3px solid black;
+    /* Adds a right border to create a typing effect */
+    animation: typing 4s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite;
+    /* Adds a typing animation effect */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        /* Start with no width */
+    }
+    to {
+        width: 100%;
+        /* End with full width */
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+        /* Start and end with no border color */
+    }
+    50% {
+        border-color: black;
+        /* Change border color to black at 50% */
+    }
+}
+
+.text p {
+    animation-delay: 4s; /* Wait for the h2 typing to finish */
+}
+
+/* Styling for each nav item */
+.nav-item {
+     /* Center the nav items horizontally */
+    margin: auto;
+    /* Add 10px of padding inside each nav item */
+    padding: 10px;
+}
+/* Styling for anchor links inside the nav items */
+.nav-item a {
+     /* Set the text color of the links to black */
+    color: black;
+    /* Underline the text of the links */
+    text-decoration: underline;
+}
+
+/* content applies to the main area of the page, makes the content take up the appropriate amount of space and centers it on the page */
+#content {
+    width: 50%;
+    margin: left;
+    font-family: Georgia;
+}
+
+h1 {
+    font-size: 2.5em;
+    background-color: rgb(213, 186, 238);
+    color: black;
+    margin-bottom: 1px;
+    padding-top: 10px;
+    /* adds a 10px padding to the top of the header and brings the byline right under h1 */
+    padding-left: 30;
+    /* adds a 30px padding to the left of the header */
+}
+
+#byline {
+    font-size: 1em;
+    background-color: rgb(213, 186, 238);
+    padding-bottom: 10px;
+    padding-left: 30;
+    /* adds a 30px padding to the left of the byline */
+}
+
+.about-page h1 {
+    font-size: 2.5em;
+    white-space: nowrap;
+    /* Prevent text from wrapping to the next line */
+    overflow: hidden;
+    /* Hide text that exceeds container */
+    border-right: 3px solid black;
+    /* Adds a right border to create a typing effect */
+    animation: typing 4s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite;
+    /* Adds a typing animation effect */
+}
+
+/* Container for the photos */
+.photo-container {
+    display: flex;
+    /* Use Flexbox to display the items in a row */
+    justify-content: center;
+    flex-direction: row;
+    /* Align the images to the left */
+    gap: 20px;
+    /* Add space between each image item */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line if they overflow */
+}
+
+/* Each photo and its description are wrapped in a div */
+.photo-item {
+    text-align: center;
+    /* Center the text description and header */
+    flex: 1 1 200px;
+    flex-direction: row;
+    /* Ensure that each item takes up equal space with a minimum width of 200px */
+}
+
+/* Style for the header above each image */
+.photo-header {
+    font-size: 1.2rem;
+    /* Adjust header font size */
+    font-weight: bold;
+    /* Make the header bold */
+    color: #333;
+    /* Text color */
+    margin-bottom: 10px;
+    /* Space between header and image */
+    flex-direction: row;
+}
+
+/* Style for each image */
+.photo {
+    width: 150px;
+    /* Adjust the size of the images */
+    height: auto;
+    /* Keep the aspect ratio */
+    display: block;
+    /* Remove extra space below images */
+    margin: 0 auto;
+    /* Center images horizontally in their container */
+    flex-direction: row;
+    
+}
+
+/* Style for descriptions */
+.description {
+    font-size: 1rem;
+    /* Adjust font size */
+    color: #333;
+    /* Text color */
+    margin-top: 10px;
+    /* Space between image and description */
+}
+
+/* used to change the width of the content so it is compatible across desktop and mobile devices */
+@media (orientation:portrait)
+{ #content {width: 90%}}
+
+#overlay {
+    background-color: rgb(213, 186, 238);
+    width: 100%;
+}
+/* groups the style for h1 and byline so the background is the same
