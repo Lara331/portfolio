@@ -308,6 +308,11 @@ a:link {
     padding-top: 30px;
 }
 
+.fluorish-caption{
+    font-size: 0.9em;
+    font-family: IBM Plex Serif, serif;
+}
+
 /* used to change the width of the content so it is compatible across desktop and mobile devices */
 @media (orientation:portrait)
 { #content {width: 90%}}
