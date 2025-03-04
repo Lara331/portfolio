@@ -1,8 +1,11 @@
 <head>
     <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 <!--link to the external style sheet, everything under body is what can be viewed on the website-->
-
+<body class="portfolio-page">
 <div id="nav-barcontainer">
     <div id="nav-bar">
         <div class="nav-item">
@@ -19,3 +22,39 @@
         </div>
     </div>
 </div>
+
+<div class="portfolio-content">
+    <!--Title for the page-->
+    <h1 class="portfolio-h1">Portfolio...</h1>
+    <p> Here is some of the work I have produced over my time at Northwestern!</p>
+    <!--create a div to hold all the portfolio items-->
+    <div id="portfolio-items">
+
+    <!--create a div for each portfolio item with class, image, alt text, and description-->
+    <div class="portfolio-item">
+        <img src="grammys.png" alt="Preview of Grammys Story">
+        <a href="https://lara331.github.io/interactives1/grammys/" class="link">
+            HTML + CSS Sample: Grammys
+        </a>
+    </div>
+
+        <div class="portfolio-item">
+            <img src="datavis.png" alt="Preview of Data Visualization">
+            <a href="https://lara331.github.io/interactives1/vis/fluorish" class="link">
+                Data Visualizations
+            </a>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="wildfire.png" alt="Preview of Wildfires Story">
+            <a href="https://lara331.github.io/interactives1/" class="link">
+                HTML + CSS Sample: Wildfires
+            </a>
+        </div>
+
+    </div>
+
+
+        
+</div>
+</body>

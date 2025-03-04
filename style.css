@@ -39,6 +39,7 @@
 .text h2 {
     font-size: 2em;
     /* Set the font size of the h2 */
+    font-family: IBM Plex Serif, serif;
     margin: 0;
     /* Remove default margin */
     padding-left: 40px;
@@ -48,10 +49,12 @@
 .text p {
     font-size: 1.2em;
     /* Set the font size of the paragraph */
+    font-family: IBM Plex Serif, serif;
     margin: 0;
     /* Remove default margin */
     padding-left: 40px;
     /* Add padding to the left */
+    flex-wrap: wrap;
 }
 
 .text h2, .text p {
@@ -104,17 +107,19 @@
     color: black;
     /* Underline the text of the links */
     text-decoration: underline;
+    font-family: IBM Plex Serif, serif;
 }
 
 /* content applies to the main area of the page, makes the content take up the appropriate amount of space and centers it on the page */
 #content {
     width: 50%;
     margin: left;
-    font-family: Georgia;
+    font-family: IBM Plex Serif, serif;
 }
 
 h1 {
     font-size: 2.5em;
+    font-family: IBM Plex Serif, serif;
     background-color: rgb(213, 186, 238);
     color: black;
     margin-bottom: 1px;
@@ -126,14 +131,20 @@ h1 {
 
 #byline {
     font-size: 1em;
+    font-family: IBM Plex Serif, serif;
     background-color: rgb(213, 186, 238);
     padding-bottom: 10px;
     padding-left: 30;
     /* adds a 30px padding to the left of the byline */
 }
 
+a:link {
+    color: black;
+}
+
 .about-page h1 {
     font-size: 2.5em;
+    font-family: IBM Plex Serif, serif;
     white-space: nowrap;
     /* Prevent text from wrapping to the next line */
     overflow: hidden;
@@ -148,13 +159,15 @@ h1 {
 .photo-container {
     display: flex;
     /* Use Flexbox to display the items in a row */
-    justify-content: center;
     flex-direction: row;
+    /* Align items in a row */
+    justify-content: center;
     /* Align the images to the left */
     gap: 20px;
     /* Add space between each image item */
     flex-wrap: wrap;
     /* Allow items to wrap to the next line if they overflow */
+    padding-top: 75px;
 }
 
 /* Each photo and its description are wrapped in a div */
@@ -162,7 +175,6 @@ h1 {
     text-align: center;
     /* Center the text description and header */
     flex: 1 1 200px;
-    flex-direction: row;
     /* Ensure that each item takes up equal space with a minimum width of 200px */
 }
 
@@ -176,12 +188,12 @@ h1 {
     /* Text color */
     margin-bottom: 10px;
     /* Space between header and image */
-    flex-direction: row;
+    font-family: IBM Plex Serif, serif;
 }
 
 /* Style for each image */
 .photo {
-    width: 150px;
+    width: 300px;
     /* Adjust the size of the images */
     height: auto;
     /* Keep the aspect ratio */
@@ -189,7 +201,6 @@ h1 {
     /* Remove extra space below images */
     margin: 0 auto;
     /* Center images horizontally in their container */
-    flex-direction: row;
     
 }
 
@@ -201,6 +212,100 @@ h1 {
     /* Text color */
     margin-top: 10px;
     /* Space between image and description */
+    font-family: IBM Plex Serif, serif;
+}
+
+.portfolio-page h1 {
+    font-size: 2.5em;
+    font-family: IBM Plex Serif, serif;
+    white-space: nowrap;
+    /* Prevent text from wrapping to the next line */
+    overflow: hidden;
+    /* Hide text that exceeds container */
+    border-right: 3px solid black;
+    /* Adds a right border to create a typing effect */
+    animation: typing 4s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite;
+    /* Adds a typing animation effect */
+}
+
+.portfolio-page p{
+    font-size: 1.2em;
+    /* Set the font size of the h2 */
+    font-family: IBM Plex Serif, serif;
+    margin: auto;
+    justify-content: center;
+    /* Align the content to the center */
+    text-align: center;
+    /* Center the text */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Style for the portfolio items container */
+#portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style for each portfolio item */
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures the image fits within the container */
+    width: 30%; 
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+/* Style for the image inside each portfolio item */
+.portfolio-item img {
+    width: 100%; /* Makes the image fill the width of its container */
+    height: auto; /* Maintains aspect ratio */
+    border-bottom: 2px solid #ddd; /* adds a border under the image */
+}
+
+/* Style for the link below the image */
+.portfolio-item .link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: rgb(213, 186, 238);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: IBM Plex Serif, serif;
+    border-radius: 5px;
+}
+
+/* Hover effect for the link */
+.portfolio-item .link:hover {
+    background-color: #5301a5;
+}
+
+.interactive-page h1{
+    font-size: 2.3em;
+    font-family: IBM Plex Serif, serif;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    justify-content: center;
+    padding-left: 0px;
+    /* overrides left padding for all other h1s */
+}
+
+
+.interactive-page p{
+    font-size: 1.3em;
+    font-family: IBM Plex Serif, serif;
+    margin: auto;
+    justify-content: center;
+    /* Align the content to the center */
+    padding-top: 30px;
 }
 
 /* used to change the width of the content so it is compatible across desktop and mobile devices */
